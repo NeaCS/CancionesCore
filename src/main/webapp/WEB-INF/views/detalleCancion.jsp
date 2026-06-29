@@ -27,6 +27,7 @@
     </div>
 
     <div class="footer">
+        <a href="/canciones/formulario/editar/${cancion.id}">Editar Canción</a>
         <a href="/canciones">Volver a lista de canciones</a>
     </div>
 
