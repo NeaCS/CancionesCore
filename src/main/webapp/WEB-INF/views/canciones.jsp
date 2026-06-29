@@ -31,7 +31,9 @@
                             <a href="/canciones/detalles/${cancion.id}">
                                 Detalle
                             </a>
+
                         </td>
+
                     </tr>
                 </c:forEach>
 

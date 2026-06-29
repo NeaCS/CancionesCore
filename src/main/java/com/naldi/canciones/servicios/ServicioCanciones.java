@@ -6,10 +6,10 @@ import org.springframework.stereotype.Service;
 import com.naldi.canciones.modelos.Cancion;
 import com.naldi.canciones.repositorios.RepositorioCanciones;
 
-
 @Service
 public class ServicioCanciones {
-  @Autowired
+
+    @Autowired
     private final RepositorioCanciones repositorioCanciones;
 
     public ServicioCanciones(RepositorioCanciones repositorioCanciones) {
@@ -24,12 +24,18 @@ public class ServicioCanciones {
         return repositorioCanciones.findById(id).orElse(null);
     }
 
-      public Cancion agregarCancion(Cancion cancion) {
+    public Cancion agregarCancion(Cancion cancion) {
         return repositorioCanciones.save(cancion);
     }
 
-    public Cancion actualizarCancion (Cancion cancion) {
+    public Cancion actualizarCancion(Cancion cancion) {
         return repositorioCanciones.save(cancion);
     }
+
+    public void eliminarCancion(Long idCancion) {
+        this.repositorioCanciones.deleteById(idCancion);
+    }
+
+
 
 }
