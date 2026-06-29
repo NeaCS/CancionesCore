@@ -3,39 +3,41 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Canciones</title>
-    <link rel="stylesheet" type="text/css" href="/css/canciones.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Canciones</title>
+        <link rel="stylesheet" type="text/css" href="/css/canciones.css">
+    </head>
 
-<body>
+    <body>
 
-<h1>Listado de Canciones</h1>
+        <h1>Listado de Canciones</h1>
 
-<table>
-    <thead>
-        <tr>
-            <th>Título</th>
-            <th>Artista</th>
-            <th>Detalle</th>
-        </tr>
-    </thead>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Artista</th>
+                    <th>Detalle</th>
+                </tr>
+            </thead>
 
-    <tbody>
-        <c:forEach items="${listaCanciones}" var="cancion">
-            <tr>
-                <td>${cancion.titulo}</td>
-                <td>${cancion.artista}</td>
-                <td>
-                    <a href="/canciones/detalles/${cancion.id}">
-                        Detalle
-                    </a>
-                </td>
-            </tr>
-        </c:forEach>
-    </tbody>
-</table>
+            <tbody>
+                <c:forEach items="${listaCanciones}" var="cancion">
+                    <tr>
+                        <td>${cancion.titulo}</td>
+                        <td>${cancion.artista}</td>
+                        <td>
+                            <a href="/canciones/detalles/${cancion.id}">
+                                Detalle
+                            </a>
+                        </td>
+                    </tr>
+                </c:forEach>
 
-</body>
+
+            </tbody>
+        </table>
+        <div><a href="/canciones/formulario/agregar"> <button>Ir a agregar canción</button> </a></div>
+    </body>
 </html>

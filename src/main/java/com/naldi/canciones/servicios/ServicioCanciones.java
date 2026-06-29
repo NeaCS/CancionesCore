@@ -10,17 +10,21 @@ import com.naldi.canciones.repositorios.RepositorioCanciones;
 @Service
 public class ServicioCanciones {
   @Autowired
-    private final RepositorioCanciones repositorioUsuario;
+    private final RepositorioCanciones repositorioCanciones;
 
     public ServicioCanciones(RepositorioCanciones repositorioCanciones) {
-        this.repositorioUsuario = repositorioCanciones;
+        this.repositorioCanciones = repositorioCanciones;
     }
 
     public Iterable<Cancion> obtenerTodasLasCanciones() {
-        return repositorioUsuario.findAll();
+        return repositorioCanciones.findAll();
     }
 
     public Cancion obtenerCancionPorId(Long id) {
-        return repositorioUsuario.findById(id).orElse(null);
+        return repositorioCanciones.findById(id).orElse(null);
+    }
+
+      public Cancion agregarCancion(Cancion cancion) {
+        return repositorioCanciones.save(cancion);
     }
 }
