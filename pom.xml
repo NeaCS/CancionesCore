@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.naldi</groupId>
-	<artifactId>usuarios</artifactId>
+	<artifactId>canciones</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>usuarios</name>
+	<name>canciones</name>
 	<description/>
 	<url/>
 	<licenses>

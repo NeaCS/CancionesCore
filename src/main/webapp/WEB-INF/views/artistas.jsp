@@ -16,9 +16,6 @@
       </c:forEach><ul/>
         <div><a href="/artistas/formulario/agregar"> <button>Agregar Artista</button> </a></div>
         <div><a href="/canciones"> <button>Volver a canciones</button> </a></div>
-
-
-
-
+    
     </body>
   </html>
